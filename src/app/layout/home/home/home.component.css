@@ -1,0 +1,33 @@
+.sub-header{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.city-dropdown{
+    width: 100%;
+}
+
+::ng-deep .mat-select-value-text{
+    font-size: 28px;
+}
+
+.mat-grid-tile .mat-figure{
+    display: block !important;
+}
+
+.weather-tile{
+    text-align: center;
+}
+
+.date{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#temp{
+    font-size: 18px;
+}
+
+.pad-left-2{
+    padding-left: 2%;
+}

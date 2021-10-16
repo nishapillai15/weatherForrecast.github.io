@@ -1,0 +1,38 @@
+<div class="container-fluid pad-left-2">
+    <div class="sub-header margin-top-3">
+        City
+    </div> <br>
+    <div>
+        <mat-form-field appearance="fill" class="city-dropdown" [floatLabel]="'never'">
+            <mat-select class="selected-city" placeholder="Select City" [(ngModel)]="selectedValue"
+                (selectionChange)="callWeatherForrecast($event)">
+                <mat-option *ngFor="let city of cities" [value]="city">
+                    {{city}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-grid-list cols="5" rowHeight="200px">
+            <mat-grid-tile class="weather-tile" *ngFor="let detail of forrecastDetails" [colspan]="" [rowspan]=""
+                [style.background]="white">
+                <div>
+                    <div class="date">
+                        {{detail.valid_date | date:'EEEE'}}
+                    </div>
+                    <div class="date">
+                        {{detail.valid_date | date:'MMM d'}}
+                    </div>
+                    <div>
+                        <img src='assets/icons/{{detail.weather.icon}}.png' alt="">
+                    </div>
+                    <div id="temp">
+                        {{detail.temp}}&deg;C
+                    </div>
+
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</div>
